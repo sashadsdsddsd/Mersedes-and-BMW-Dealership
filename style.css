@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary: #e63946;
+  --primary-hover: #c1121f;
+  --bg-dark: #0f1115;
+  --bg-card: #181b20;
+  --bg-alt: #14171d;
+  --text-light: #f8f9fa;
+  --text-gray: #a0a5b1;
+  --accent: #ffd166;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Шапка сайту */
+.navbar {
+  background: rgba(15, 17, 21, 0.9);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+  transition: 0.3s;
+}
+
+/* Кнопки */
+.btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: var(--bg-dark);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Головна секція */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(90deg, rgba(15,17,21,0.95) 0%, rgba(15,17,21,0.4) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.badge {
+  background: var(--primary);
+  padding: 6px 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.hero p {
+  color: var(--text-gray);
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+}
+
+/* Секції */
+.section {
+  padding: 80px 0;
+}
+
+.bg-alt {
+  background-color: var(--bg-alt);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+}
+
+.section-header p {
+  color: var(--text-gray);
+}
+
+/* Фільтри */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--bg-card);
+  color: var(--text-light);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Картки авто */
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.car-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.car-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.car-info {
+  padding: 20px;
+}
+
+.car-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.car-specs {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-gray);
+  font-size: 14px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding-bottom: 10px;
+}
+
+.car-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Секція Trade-In */
+.tradein-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.check-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.check-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check-list i {
+  color: var(--primary);
+}
+
+.tradein-card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  color: #fff;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--primary);
+}
+
+.trade-result {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(230, 57, 70, 0.1);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.trade-result h4 {
+  font-size: 28px;
+  color: var(--accent);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Тест-драйв */
+.testdrive-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Модальне вікно */
+.modal {
+  display: none;
+  position: fixed;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Футер */
+footer {
+  background: #090a0c;
+  padding: 50px 0 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-brand {
+  max-width: 350px;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 20px;
+}
+
+/* Мобільна адаптивність */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 32px; }
+  .tradein-wrapper { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}

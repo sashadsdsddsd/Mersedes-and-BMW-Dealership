@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUTOLUX — Преміальний Автосалон</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Іконки FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Навігація -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo"><i class="fa-solid fa-car-side"></i> AUTO<span>LUX</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#tradein">Trade-In</a></li>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+      <a href="#testdrive" class="btn btn-primary"><i class="fa-solid fa-key"></i> Тест-драйв</a>
+    </div>
+  </header>
+
+  <!-- Головний банер -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="badge">Нове надходження 2026</span>
+      <h1>Інновації та Розкіш у Кожному Кілометрі</h1>
+      <p>Оберіть ідеальний автомобіль з найкращої колекції європейських та азійських брендів з гарантією до 5 років.</p>
+      <div class="hero-btns">
+        <a href="#catalog" class="btn btn-primary">Обрати авто</a>
+        <a href="#tradein" class="btn btn-outline">Оцінити авто</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Каталог авто -->
+  <section id="catalog" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Наш Автопарк</h2>
+        <p>Знайдіть свій майбутній автомобіль</p>
+      </div>
+
+      <!-- Фільтри -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Всі</button>
+        <button class="filter-btn" data-filter="sedan">Седани</button>
+        <button class="filter-btn" data-filter="suv">Кросовери</button>
+        <button class="filter-btn" data-filter="electric">Електро</button>
+        <button class="filter-btn" data-filter="sport">Спорткари</button>
+      </div>
+
+      <!-- Картки автомобілів -->
+      <div class="car-grid" id="carGrid"></div>
+    </div>
+  </section>
+
+  <!-- Калькулятор Trade-In -->
+  <section id="tradein" class="section bg-alt">
+    <div class="container">
+      <div class="tradein-wrapper">
+        <div class="tradein-text">
+          <h2>Опція Trade-In: обміняйте старе авто на нове</h2>
+          <p>Заповніть форму та отримайте попередню оцінку вашого авто за 5 хвилин.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-circle-check"></i> Оцінка за ринковою вартістю</li>
+            <li><i class="fa-solid fa-circle-check"></i> Оформлення документів за 1 годину</li>
+            <li><i class="fa-solid fa-circle-check"></i> Гарантія юридичної чистоти</li>
+          </ul>
+        </div>
+        <div class="tradein-card">
+          <h3>Калькулятор оцінки</h3>
+          <form id="tradeinForm">
+            <div class="form-group">
+              <label>Марка та модель</label>
+              <input type="text" id="tradeModel" placeholder="Наприклад: BMW X5" required>
+            </div>
+            <div class="form-group">
+              <label>Рік випуску</label>
+              <input type="number" id="tradeYear" placeholder="2018" min="2000" max="2026" required>
+            </div>
+            <div class="form-group">
+              <label>Пробіг (км)</label>
+              <input type="number" id="tradeMileage" placeholder="85000" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Розрахувати вартість</button>
+          </form>
+          <div id="tradeResult" class="trade-result hidden">
+            <span>Орієнтовна вартість:</span>
+            <h4 id="calcPrice">$0</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Форма запису на тест-драйв -->
+  <section id="testdrive" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Запис на Тест-Драйв</h2>
+        <p>Відчуйте драйв та комфорт перед покупкою</p>
+      </div>
+      <form class="testdrive-form" id="testDriveForm">
+        <div class="form-grid">
+          <input type="text" placeholder="Ваше ім'я" required>
+          <input type="tel" placeholder="Номер телефону" required>
+          <select id="carSelect" required>
+            <option value="">Оберіть модель</option>
+          </select>
+          <input type="date" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 15px;">Записатися</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Підвал (Footer) -->
+  <footer id="contacts">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo"><i class="fa-solid fa-car-side"></i> AUTO<span>LUX</span></a>
+        <p>Офіційний дилер преміальних авто. Продаж, обслуговування та Trade-In.</p>
+      </div>
+      <div class="footer-info">
+        <h4>Контакти</h4>
+        <p><i class="fa-solid fa-location-dot"></i> вул. Автомобільна, 100</p>
+        <p><i class="fa-solid fa-phone"></i> +380 (44) 555-35-35</p>
+        <p><i class="fa-solid fa-envelope"></i> info@autolux.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AUTOLUX. Усі права захищені.</p>
+    </div>
+  </footer>
+
+  <!-- Модальне вікно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

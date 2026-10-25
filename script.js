@@ -186,4 +186,8 @@ document.getElementById('testDriveForm').addEventListener('submit', (e) => {
 // Ініціалізація
 displayCars(cars);
 populateSelect();
+
+// Ініціалізація
+displayCars(cars);
+populateSelect();
 opulateSelect();

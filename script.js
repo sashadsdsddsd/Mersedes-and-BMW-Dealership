@@ -189,4 +189,7 @@ populateSelect();
 // Ініціалізація
 displayCars(cars);
 populateSelect();
+// Ініціалізація
+displayCars(cars);
+populateSelect();
 opulateSelect();

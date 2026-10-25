@@ -8,7 +8,7 @@ const cars = [
     year: 2024,
     power: "637 к.с.",
     speed: "3.3 сек до 100 км/год",
-    img: "https://images.unsplash.com/photo-1614026425726-1b0a9cdbe752?auto=format&fit=crop&w=800&q=80"
+    img: "https://car-images.bauersecure.com/wp-images/197037/091-audi-e-tron-gt-review-front-silver-s.jpg"
   },
   {
     id: 2,
@@ -28,40 +28,60 @@ const cars = [
     year: 2024,
     power: "500 к.с.",
     speed: "4.5 сек до 100 км/год",
-    img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+    img: "https://motoringworld.in/wp-content/uploads/2024/04/porsche-cayenne-gts-2.jpg"
   },
   {
     id: 4,
-    title: "Mercedes-AMG GT R",
+    title: "Mercedes-AMG One ",
     category: "sport",
-    price: 160000,
+    price: 3500000,
     year: 2023,
-    power: "585 к.с.",
-    speed: "3.6 сек до 100 км/год",
-    img: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80"
+    power: " 1 063 к.с.",
+    speed: " 100 км/год: 2,9 секунди",
+    img: "https://car-images.bauersecure.com/wp-images/3144/amgone_ring1.jpg"
   },
   {
     id: 5,
-    title: "Tesla Model S Plaid",
+    title: "Rolls-Royce Spectre ",
     category: "electric",
-    price: 98000,
-    year: 2024,
-    power: "1020 к.с.",
-    speed: "2.1 сек до 100 км/год",
-    img: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=800&q=80"
+    price: 450000,
+    year: 2022,
+    power: "585 к.с.",
+    speed: "100 км/год: приблизно 4,4–4,5 сек",
+    img: "https://ddtuning.com.ua/assets/galleries/125487/594/1920x-1.jpg"
   },
   {
     id: 6,
-    title: "Range Rover Sport",
+    title: " Zeekr 9X Mansory",
     category: "suv",
-    price: 115000,
-    year: 2023,
-    power: "530 к.с.",
-    speed: "4.5 сек до 100 км/год",
-    img: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80"
-  }
-];
+    price: 400000 ,
+    year: 2026,
+    power: " 1410 к.с.",
+    speed: " 100 км/год: 3.1 сек",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFNMn8qOl6SBDI-PDJhJBQxmrEpqJlPujIu2oYKwz_uSEJV-RSzD9O9u8V&s=10"
+  },
+  {
+    id: 7,
+    title: " Bugatti Bolide",
+    category: "sport",
+    price: 4700000 ,
+    year: 2026,
+    power: " 1410 к.с.",
+    speed: "100 км/год: 2,2 сек",
+    img: "https://fsn1.your-objectstorage.com/ac-cdn/images/bugatti-bolide-3.webp"
+  },
+  {
+    id: 8,
+    title: "Mercedes-Benz S-Class",
+    category: "sedan",
+    price: 240000 ,
+    year: 2026,
+    power: " 537 к.с.",
+    speed: "100 км/год: 4,3 сек",
+    img: "https://en.drivar.de/wp-content/uploads/2026/01/neue-benz-s-klasse.jpeg"
+  },
 
+];
 const carGrid = document.getElementById('carGrid');
 const carSelect = document.getElementById('carSelect');
 
@@ -166,3 +186,4 @@ document.getElementById('testDriveForm').addEventListener('submit', (e) => {
 // Ініціалізація
 displayCars(cars);
 populateSelect();
+opulateSelect();
